@@ -21,7 +21,7 @@ resource "aws_security_group" "eks_cluster_sg" {
   ingress {
     from_port   = 22
     to_port     = 22
-    protocol    = "ssh"
+    protocol    = "SSH"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
