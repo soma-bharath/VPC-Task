@@ -24,7 +24,12 @@ resource "aws_security_group" "eks_cluster_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1" # This means all protocols
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   # Egress rules for control plane security group
   egress {
     from_port   = 0
