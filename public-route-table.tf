@@ -8,6 +8,8 @@ resource "aws_route_table" "public_route_table" {
 
   tags = {
     Name = "Public Route Table"
+    Date = local.current_date
+    Env  = var.env
   }
 }
 
