@@ -3,6 +3,8 @@ resource "aws_route_table" "private_route_table" {
 
   tags = {
     Name = "Private Route Table"
+    Date = local.current_date
+    Env  = var.env
   }
 }
 
