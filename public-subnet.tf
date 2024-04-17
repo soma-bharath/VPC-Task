@@ -5,6 +5,8 @@ resource "aws_subnet" "public_subnet_1" {
   tags = {
     Name = "public_subnet_1"
     Subnet-Type = "public"
+    Date = local.current_date
+    Env  = var.env
   }
 }
 
@@ -15,5 +17,7 @@ resource "aws_subnet" "public_subnet_2" {
   tags = {
     Name = "public_subnet_2"
     Subnet-Type = "public"
+    Date = local.current_date
+    Env  = var.env
   }
 }
