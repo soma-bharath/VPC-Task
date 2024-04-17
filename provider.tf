@@ -11,3 +11,7 @@ provider "aws" {
   region     = "us-west-2"
 
 }
+
+locals {
+  current_date = formatdate("YYYY-MM-DD", timestamp())
+}
