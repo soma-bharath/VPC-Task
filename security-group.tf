@@ -39,5 +39,7 @@ resource "aws_security_group" "eks_cluster_sg" {
   }
   tags = {
     Name = "EKS-Security-Group"
+    Date = local.current_date
+    Env  = var.env
   }
 }
