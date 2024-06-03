@@ -2,9 +2,11 @@ resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.my_vpc.id
 
   tags = {
-    Name = "Private Route Table"
+    Name = var.Name
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
