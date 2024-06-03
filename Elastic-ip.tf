@@ -1,4 +1,4 @@
-resource "aws_eip" "Public_subnet_a" {
+resource "aws_eip" "Public_eip_a" {
   vpc = true
   tags = {
     Name = "EIP_public_subnet_a
@@ -9,7 +9,7 @@ resource "aws_eip" "Public_subnet_a" {
   }
 }
 
-resource "aws_eip" "Public_subnet_c" {
+resource "aws_eip" "Public_eip_c" {
   vpc = true
   tags = {
     Name = "EIP_public_subnet_c
