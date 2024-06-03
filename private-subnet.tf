@@ -5,8 +5,10 @@ resource "aws_subnet" "private_subnet_1" {
   tags = {
     Name = "private_subnet_1"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -17,8 +19,10 @@ resource "aws_subnet" "private_subnet_2" {
   tags = {
     Name = "private_subnet_2"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -29,8 +33,10 @@ resource "aws_subnet" "private_subnet_3" {
   tags = {
     Name = "private_subnet_3"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -41,8 +47,10 @@ resource "aws_subnet" "private_subnet_4" {
   tags = {
     Name = "private_subnet_4"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -53,8 +61,10 @@ resource "aws_subnet" "private_subnet_5" {
   tags = {
     Name = "private_subnet_5"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -65,8 +75,10 @@ resource "aws_subnet" "private_subnet_6" {
   tags = {
     Name = "private_subnet_6"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -77,8 +89,10 @@ resource "aws_subnet" "private_subnet_7" {
   tags = {
     Name = "private_subnet_7"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -89,8 +103,10 @@ resource "aws_subnet" "private_subnet_8" {
   tags = {
     Name = "private_subnet_8"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
 
@@ -101,7 +117,9 @@ resource "aws_subnet" "private_subnet_9" {
   tags = {
     Name = "private_subnet_9"
     Subnet-Type = "private"
+    Environment  = var.env
+    Email   = var.Email
+    Project_Name = var.Project_Name
     Date = local.current_date
-    Env  = var.env
   }
 }
