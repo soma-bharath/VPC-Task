@@ -1,8 +1,8 @@
 resource "aws_route_table" "private_route_table" {
-  vpc_id = aws_vpc.my_vpc.id
+  vpc_id = data.aws_vpc.main_vpc.id
 
   tags = {
-    Name = var.Name
+    Name = "Private-Route-Table-spaces-prod"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -10,10 +10,16 @@ resource "aws_route_table" "private_route_table" {
   }
 }
 
-resource "aws_route" "private_subnet_nat_route" {
+resource "aws_route" "private_subnet_nat_route_a" {
   route_table_id   = aws_route_table.private_route_table.id
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id  = aws_nat_gateway.my_nat_gateway.id
+  nat_gateway_id  = aws_nat_gateway.nategateway_a.id
+}
+
+resource "aws_route" "private_subnet_nat_route_c" {
+  route_table_id   = aws_route_table.private_route_table.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id  = aws_nat_gateway.nategateway_c.id
 }
 
 resource "aws_route_table_association" "private_subnet_association_1" {
@@ -43,20 +49,5 @@ resource "aws_route_table_association" "private_subnet_association_5" {
 
 resource "aws_route_table_association" "private_subnet_association_6" {
   subnet_id      = aws_subnet.private_subnet_6.id
-  route_table_id = aws_route_table.private_route_table.id
-}
-
-resource "aws_route_table_association" "private_subnet_association_7" {
-  subnet_id      = aws_subnet.private_subnet_7.id
-  route_table_id = aws_route_table.private_route_table.id
-}
-
-resource "aws_route_table_association" "private_subnet_association_8" {
-  subnet_id      = aws_subnet.private_subnet_8.id
-  route_table_id = aws_route_table.private_route_table.id
-}
-
-resource "aws_route_table_association" "private_subnet_association_9" {
-  subnet_id      = aws_subnet.private_subnet_9.id
   route_table_id = aws_route_table.private_route_table.id
 }
