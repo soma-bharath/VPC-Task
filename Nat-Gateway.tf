@@ -1,5 +1,5 @@
 resource "aws_nat_gateway" "nategateway_a" {
-  allocation_id = aws_eip.Public_subnet_a.id
+  allocation_id = aws_eip.Public_eip_a.id
   subnet_id     = aws_subnet.public_subnet_1.id
   tags = {
     Name = "NatGateway_A"
@@ -11,7 +11,7 @@ resource "aws_nat_gateway" "nategateway_a" {
 }
 
 resource "aws_nat_gateway" "nategateway_c" {
-  allocation_id = aws_eip.Public_subnet_c.id
+  allocation_id = aws_eip.Public_eip_c.id
   subnet_id     = aws_subnet.public_subnet_3.id
   tags = {
     Name = "NatGateway_C"
