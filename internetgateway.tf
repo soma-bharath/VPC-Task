@@ -1,5 +1,5 @@
 resource "aws_internet_gateway" "my_igw" {
-  vpc_id = aws_vpc.my_vpc.id
+  vpc_id = data.aws_vpc.main_vpc.id
 
   tags = {
     Name = var.Name
