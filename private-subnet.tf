@@ -1,10 +1,9 @@
 resource "aws_subnet" "private_subnet_1" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.2.0/24"
-  availability_zone = "us-west-2a"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.16.0/20"
+  availability_zone = "us-gov-west-1a"
   tags = {
-    Name = "private_subnet_1"
-    Subnet-Type = "private"
+    Name = "spaces-prod-app-1a"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -13,12 +12,11 @@ resource "aws_subnet" "private_subnet_1" {
 }
 
 resource "aws_subnet" "private_subnet_2" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.3.0/24"
-  availability_zone = "us-west-2b"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.96.0/20"
+  availability_zone = "us-gov-west-1b"
   tags = {
-    Name = "private_subnet_2"
-    Subnet-Type = "private"
+    Name = "spaces-prod-app-1b"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -27,12 +25,11 @@ resource "aws_subnet" "private_subnet_2" {
 }
 
 resource "aws_subnet" "private_subnet_3" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.4.0/24"
-  availability_zone = "us-west-2c"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.112.0/20"
+  availability_zone = "us-gov-west-1c"
   tags = {
-    Name = "private_subnet_3"
-    Subnet-Type = "private"
+    Name = "spaces-prod-app-1c"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -41,12 +38,11 @@ resource "aws_subnet" "private_subnet_3" {
 }
 
 resource "aws_subnet" "private_subnet_4" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.5.0/24"
-  availability_zone = "us-west-2a"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.128.0/20"
+  availability_zone = "us-gov-west-1a"
   tags = {
-    Name = "private_subnet_4"
-    Subnet-Type = "private"
+    Name = "spaces-prod-db-1a"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -55,12 +51,11 @@ resource "aws_subnet" "private_subnet_4" {
 }
 
 resource "aws_subnet" "private_subnet_5" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.6.0/24"
-  availability_zone = "us-west-2b"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.144.0/20"
+  availability_zone = "us-gov-west-1b"
   tags = {
-    Name = "private_subnet_5"
-    Subnet-Type = "private"
+    Name = "spaces-prod-db-1b"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
@@ -69,54 +64,11 @@ resource "aws_subnet" "private_subnet_5" {
 }
 
 resource "aws_subnet" "private_subnet_6" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.7.0/24"
-  availability_zone = "us-west-2c"
+  vpc_id            = data.aws_vpc.main_vpc.id
+  cidr_block        = "10.60.160.0/20"
+  availability_zone = "us-gov-west-1c"
   tags = {
-    Name = "private_subnet_6"
-    Subnet-Type = "private"
-    Environment  = var.env
-    Email   = var.Email
-    Project_Name = var.Project_Name
-    Date = local.current_date
-  }
-}
-
-resource "aws_subnet" "private_subnet_7" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.8.0/24"
-  availability_zone = "us-west-2a"
-  tags = {
-    Name = "private_subnet_7"
-    Subnet-Type = "private"
-    Environment  = var.env
-    Email   = var.Email
-    Project_Name = var.Project_Name
-    Date = local.current_date
-  }
-}
-
-resource "aws_subnet" "private_subnet_8" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.9.0/24"
-  availability_zone = "us-west-2b"
-  tags = {
-    Name = "private_subnet_8"
-    Subnet-Type = "private"
-    Environment  = var.env
-    Email   = var.Email
-    Project_Name = var.Project_Name
-    Date = local.current_date
-  }
-}
-
-resource "aws_subnet" "private_subnet_9" {
-  vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.0.10.0/24"
-  availability_zone = "us-west-2c"
-  tags = {
-    Name = "private_subnet_9"
-    Subnet-Type = "private"
+    Name = "spaces-prod-db-1c"
     Environment  = var.env
     Email   = var.Email
     Project_Name = var.Project_Name
